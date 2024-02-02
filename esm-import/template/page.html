@@ -1,0 +1,35 @@
+<html>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/editor/editor.main.css"
+    />
+
+    <script type="dagger/modules">
+    {
+        view: "#view",
+        js: "./page.js",
+        css: "./page.css",
+        mdjs: "https://md-block.verou.me/md-block.js"
+    }
+    </script>
+    <template id="view">
+        <div
+        +loading="{
+            monaco: null,
+            editor: null,
+            editorVal: null
+          }"
+        +loaded="monaco=monacoEditor">
+            <div class="container">
+                <div
+                class="editor"
+                +loaded="initMonaco(monaco, $node, $scope, example)"
+                ></div>
+                <iframe 
+                class="preview"
+                $src="getGeneratedPageURL(editorVal)"
+                ></iframe>
+            </div>
+        </div>
+    </template>
+</html>

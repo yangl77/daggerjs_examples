@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .doc {
+    width: 400px;
+    border: 1px solid grey;
+  }
+  
+  .editor {
+    width: 800px;
+    float: left;
+    border: 1px solid grey;
+    height: 400px;
+  }
+  
+  .preview {
+    width: 600px;
+    float: right;
+    border: 1px solid grey;
+    height:400px;
+  }

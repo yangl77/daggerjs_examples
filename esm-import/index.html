@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Monaco import from CDN</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      type="module"
+      crossorigin="anonymous"
+      src="../../js/dagger.js"
+      defer
+    ></script>
+    <script type="dagger/modules">
+      {
+        js: "./index.js",
+        page: "./template/page.html"
+      }
+    </script>
+  </head>
+
+  <body>
+    <h1>This page contains a bug that needs to be fixed</h1>
+    <page +loading="{example: 'checked'}"></page>
+    <page +loading="{example: 'value'}"></page>
+    <page +loading="{example: 'watch'}"></page>
+    <page +loading="{example: 'each'}"></page>
+    <page +loading="{example: 'result'}"></page>
+  </body>
+
+</html>
